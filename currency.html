@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <title>
+      Currency Converter
+  </title>
+  </head>
+  <body style="background:linear-gradient(to right, #0c9fda 0%, #d840e6 50%, #0c9fda 99%);">
+    <center>
+      <form name="converter" >
+        <div style="background-color: darkslategrey;width: 600px;height: 60px;">
+          <h1 style="font-style: georgia;color: khaki;">Currency converter</h1>
+
+          <div style="background-color: rgb(245, 248, 248);width: 600px;height: 500px;">
+            <table border="0">
+              <tr>
+                <td><input type="button" value="&#8360;" style="background-color: rgb(196, 212, 218);" >
+                Indian Rupee: 
+                &nbsp;<input type="text" name="indian"  onChange="indianConverter()" style="background-color: lightblue;"/></td>
+                </tr>
+            <tr>
+            <td><input type="button" value="&euro;" style="background-color: rgb(196, 212, 218);" >
+              Euro: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="text" name="euro" onChange="euroConverter()" style="background-color: lightblue;"/></td>
+            </tr>
+            <tr>
+            <td><input type="button" value="&#36;" style="background-color: rgb(196, 212, 218);" >
+              US Dollar: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="text" name="dollar" onChange="dollarConverter()" style="background-color: lightblue;"/></td>
+            </tr>
+            <tr>
+            <td><input type="button" value="&#163;" style="background-color: rgb(196, 212, 218);" >
+              British Pound:&nbsp;
+              <input type="text" name="pound" onChange="poundConverter()" style="background-color: lightblue;"/></td>
+            </tr>
+            <tr>
+            <td><input type="button" value="&#165;" style="background-color: rgb(196, 212, 218);" >
+              Japanese Yen: &nbsp;
+              <input type="text" name="yen" onChange="yenConverter()" style="background-color: lightblue;"/></td>
+            </tr>
+            <br><br><br><br>
+            <tr>
+              
+            <td colspan="2" align="center"><br><input type="button" value="Convert!" /></td>
+            </tr>
+            </table>
+          </div>
+         
+        </div>
+        
+        </form>
+    </center>
+    <button><a href="mainpage.html">Home Page</a></button>
+  </body>
+  <script language="JavaScript">
+    
+    function indianConverter(){
+    document.converter.euro.value = document.converter.indian.value * 0.011
+    document.converter.dollar.value = document.converter.indian.value * 0.013
+    document.converter.pound.value = document.converter.indian.value * 0.0098
+    document.converter.yen.value = document.converter.indian.value * 1.47
+    }
+
+    function euroConverter(){
+    document.converter.indian.value = document.converter.euro.value * 89.06
+    document.converter.dollar.value = document.converter.euro.value * 1.470
+    document.converter.pound.value = document.converter.euro.value * 0.717
+    document.converter.yen.value = document.converter.euro.value * 165.192
+    }
+    function dollarConverter(){
+      document.converter.indian.value = document.converter.dollor.value * 74.10
+    document.converter.euro.value = document.converter.dollar.value * 0.680
+    document.converter.pound.value = document.converter.dollar.value * 0.488
+    document.converter.yen.value = document.converter.dollar.value * 112.36
+    }
+    function poundConverter(){
+      document.converter.indian.value = document.converter.pound.value * 102.37
+    document.converter.dollar.value = document.converter.pound.value * 2.049
+    document.converter.euro.value = document.converter.pound.value * 1.394
+    document.converter.yen.value = document.converter.pound.value * 230.27
+    }
+    function yenConverter(){
+      document.converter.indian.value = document.converter.yen.value * 0.68
+    document.converter.dollar.value = document.converter.yen.value * 0.0089
+    document.converter.pound.value = document.converter.yen.value * 0.00434
+    document.converter.euro.value = document.converter.yen.value * 0.00605
+    }
+    
+    </script>
+</html>
+
+
+
+
+    
+   
+           
+   
+      
